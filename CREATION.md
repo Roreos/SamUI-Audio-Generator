@@ -1,0 +1,1 @@
+# Create an electron app that uses the sam robot audio generator voice library also called ```sam-js```. Basically a TTS app that plays through the users mic when picked. User can also choose to hear the playback in the headphones or speakers they choose.
