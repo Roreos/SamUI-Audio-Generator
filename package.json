@@ -1,0 +1,26 @@
+{
+  "name": "project",
+  "description": "Electron app with SAM robot voice TTS",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "build": "electron-builder",
+    "dist": "electron-builder --publish=never"
+  },
+  "keywords": ["electron", "tts", "sam", "voice"],
+  "author": "Your Name",
+  "license": "ISC",
+  "build": {
+    "appId": "com.example.sam-tts",
+    "productName": "SAM TTS",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "node_modules/**/*"
+    ]
+  },
+  "description": ""
+}

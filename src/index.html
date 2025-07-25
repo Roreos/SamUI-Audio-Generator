@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAM TTS - Robot Voice Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 SAM TTS</h1>
+            <p>Robot Voice Text-to-Speech Generator</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <label for="text-input">Enter text to speak:</label>
+                <textarea 
+                    id="text-input" 
+                    placeholder="Type your message here..."
+                    rows="4"
+                >Hello, I am SAM, a software automatic mouth.</textarea>
+            </div>
+
+            <div class="controls-section">
+                <div class="voice-controls">
+                    <h3>Voice Settings</h3>
+                    <div class="control-group">
+                        <label for="pitch">Pitch:</label>
+                        <input type="range" id="pitch" min="0" max="255" value="64">
+                        <span id="pitch-value">64</span>
+                    </div>
+                    <div class="control-group">
+                        <label for="speed">Speed:</label>
+                        <input type="range" id="speed" min="0" max="255" value="72">
+                        <span id="speed-value">72</span>
+                    </div>
+                    <div class="control-group">
+                        <label for="mouth">Mouth:</label>
+                        <input type="range" id="mouth" min="0" max="255" value="128">
+                        <span id="mouth-value">128</span>
+                    </div>
+                    <div class="control-group">
+                        <label for="throat">Throat:</label>
+                        <input type="range" id="throat" min="0" max="255" value="128">
+                        <span id="throat-value">128</span>
+                    </div>
+                </div>
+
+                <div class="audio-controls">
+                    <h3>Audio Output</h3>
+                    <div class="control-group">
+                        <label for="output-device">Output Device:</label>
+                        <select id="output-device">
+                            <option value="default">Default Speakers</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label>
+                            <input type="checkbox" id="mic-output">
+                            Route to Microphone
+                        </label>
+                    </div>
+                    <div class="control-group">
+                        <label for="volume">Volume:</label>
+                        <input type="range" id="volume" min="0" max="100" value="80">
+                        <span id="volume-value">80%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-section">
+                <button id="speak-btn" class="primary-btn">🎤 Speak</button>
+                <button id="stop-btn" class="secondary-btn" disabled>⏹️ Stop</button>
+                <button id="preview-btn" class="secondary-btn">🔊 Preview</button>
+            </div>
+
+            <div class="status-section">
+                <div id="status" class="status-indicator">Ready</div>
+                <div id="waveform" class="waveform"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>
