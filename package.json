@@ -22,5 +22,11 @@
       "node_modules/**/*"
     ]
   },
-  "description": ""
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1"
+  },
+  "dependencies": {
+    "sam-js": "^0.3.1"
+  }
 }
